@@ -22,8 +22,16 @@ class Comodo:
 
     @largura.setter
     def largura(self, largura):
-        self.__largura = float(largura)
+        try:
+            self.__largura = float(largura)
+        except Exception:
+            print('O valor informado da largura é inválido')
+            exit()
 
     @profundidade.setter
     def profundidade(self, profundidade):
-        self.__profundidade = float(profundidade)
+        try:
+            self.__profundidade = float(profundidade)
+        except Exception:
+            print('O valor informado da profundidade é inválido')
+            exit()
