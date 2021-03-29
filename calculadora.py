@@ -12,4 +12,7 @@ class Calculadora:
         return self.__area_teto
 
     def calcular_litragem(self):
+        if self.__area_paredes <= 0 or self.__area_teto <= 0:
+            print('Nao foi possivel calcular a litragem com os valores informados')
+            exit()
         return (self.__area_paredes + self.__area_teto) / 10
